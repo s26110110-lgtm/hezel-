@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pen</title>
+  </head>
+  <body>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
@@ -120,6 +133,11 @@
             box-shadow: 0 0 20px rgba(255, 0, 85, 0.4), inset 0 0 15px rgba(255, 0, 85, 0.2);
         }
 
+        .quest-card.w3-card:hover {
+            border-color: var(--neon-yellow);
+            box-shadow: 0 0 20px rgba(252, 238, 10, 0.4), inset 0 0 15px rgba(252, 238, 10, 0.2);
+        }
+
         /* Locked Card */
         .locked-card {
             background: rgba(15, 15, 22, 0.6);
@@ -183,14 +201,14 @@
                 SYSTEM: ONLINE
             </span>
             <span class="tracking-widest">USER_ID: #DEV-2026-X</span>
-            <span>LEVEL: 02 / 18</span>
+            <span>LEVEL: 03 / 18</span>
         </div>
 
         <!-- Avatar Container -->
         <div class="relative inline-block mb-4">
             <div class="avatar-frame w-32 h-32 sm:w-40 sm:h-40 mx-auto">
                 <img 
-                    src="https://placehold.co/300x300/121220/00f3ff?text=PLAYER+ONE&font=orbitron" 
+                    src="https://i.postimg.cc/7hbjjRKL/unnamed.jpg" 
                     alt="Developer Avatar" 
                     class="avatar-img w-full h-full object-cover"
                     onerror="this.src='https://via.placeholder.com/150/0a0a12/00f3ff?text=AVATAR'"
@@ -269,20 +287,29 @@
                 </div>
             </a>
 
-            <!-- ================= LOCKED QUESTS (3 - 18) ================= -->
+            <!-- Week 3 (Active) -->
+            <a href="w3/index.html" class="quest-card w3-card p-4 flex flex-col justify-between min-h-[130px] group">
+                <div class="hud-corner hud-tl" style="border-color: var(--neon-yellow);"></div>
+                <div class="hud-corner hud-br" style="border-color: var(--neon-yellow);"></div>
 
-            <!-- Week 3 -->
-            <div class="locked-card p-4 flex flex-col justify-between min-h-[130px]">
-                <div class="flex justify-between items-start">
-                    <span class="text-xs font-mono text-gray-600">STAGE_03</span>
-                    <span class="text-sm">🔒</span>
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-xs font-bold text-yellow-400 font-mono">STAGE_03</span>
+                    <span class="status-badge bg-yellow-500/20 text-yellow-300 border border-yellow-400/50 font-bold">CLEARED</span>
                 </div>
+
                 <div>
-                    <h3 class="text-sm font-bold text-gray-500">Week 3 - 未解鎖</h3>
-                    <p class="text-[11px] text-gray-600 mt-1">任務鎖定中 (LOCKED)</p>
+                    <h3 class="text-base font-bold text-white group-hover:text-yellow-300 transition-colors">
+                        Week 3 - 迷因產生器
+                    </h3>
+                    <p class="text-[11px] text-gray-400 mt-1 font-mono">自訂文字與圖片梗圖產生器</p>
                 </div>
-                <div class="text-[10px] text-gray-600 tracking-widest text-right mt-2 font-mono">RESTRICTED</div>
-            </div>
+
+                <div class="flex justify-end items-center mt-3 pt-2 border-t border-yellow-500/20 text-xs text-yellow-400 group-hover:translate-x-1 transition-transform">
+                    ENTER STAGE ➔
+                </div>
+            </a>
+
+            <!-- ================= LOCKED QUESTS (4 - 18) ================= -->
 
             <!-- Week 4 -->
             <div class="locked-card p-4 flex flex-col justify-between min-h-[130px]">
