@@ -1,17 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pen</title>
-  </head>
-  <body>
-
-    <script src="./script.js"></script>
-  </body>
-</html>
-<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
@@ -26,6 +13,7 @@
             --neon-cyan: #00f3ff;
             --neon-pink: #ff0055;
             --neon-yellow: #fcee0a;
+            --neon-green: #00ff66;
             --dark-bg: #0a0a12;
             --card-bg: rgba(18, 18, 32, 0.75);
             --locked-color: #2a2a3a;
@@ -138,6 +126,11 @@
             box-shadow: 0 0 20px rgba(252, 238, 10, 0.4), inset 0 0 15px rgba(252, 238, 10, 0.2);
         }
 
+        .quest-card.w4-card:hover {
+            border-color: var(--neon-green);
+            box-shadow: 0 0 20px rgba(0, 255, 102, 0.4), inset 0 0 15px rgba(0, 255, 102, 0.2);
+        }
+
         /* Locked Card */
         .locked-card {
             background: rgba(15, 15, 22, 0.6);
@@ -201,7 +194,7 @@
                 SYSTEM: ONLINE
             </span>
             <span class="tracking-widest">USER_ID: #DEV-2026-X</span>
-            <span>LEVEL: 03 / 18</span>
+            <span>LEVEL: 04 / 18</span>
         </div>
 
         <!-- Avatar Container -->
@@ -309,20 +302,29 @@
                 </div>
             </a>
 
-            <!-- ================= LOCKED QUESTS (4 - 18) ================= -->
+            <!-- Week 4 (Active) -->
+            <a href="w4/index.html" class="quest-card w4-card p-4 flex flex-col justify-between min-h-[130px] group">
+                <div class="hud-corner hud-tl" style="border-color: var(--neon-green);"></div>
+                <div class="hud-corner hud-br" style="border-color: var(--neon-green);"></div>
 
-            <!-- Week 4 -->
-            <div class="locked-card p-4 flex flex-col justify-between min-h-[130px]">
-                <div class="flex justify-between items-start">
-                    <span class="text-xs font-mono text-gray-600">STAGE_04</span>
-                    <span class="text-sm">🔒</span>
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-xs font-bold text-emerald-400 font-mono">STAGE_04</span>
+                    <span class="status-badge bg-emerald-500/20 text-emerald-300 border border-emerald-400/50 font-bold">CLEARED</span>
                 </div>
+
                 <div>
-                    <h3 class="text-sm font-bold text-gray-500">Week 4 - 未解鎖</h3>
-                    <p class="text-[11px] text-gray-600 mt-1">任務鎖定中 (LOCKED)</p>
+                    <h3 class="text-base font-bold text-white group-hover:text-emerald-300 transition-colors">
+                        Week 4 - 悄悄話
+                    </h3>
+                    <p class="text-[11px] text-gray-400 mt-1 font-mono">加密解密與匿名訊息發送</p>
                 </div>
-                <div class="text-[10px] text-gray-600 tracking-widest text-right mt-2 font-mono">RESTRICTED</div>
-            </div>
+
+                <div class="flex justify-end items-center mt-3 pt-2 border-t border-emerald-500/20 text-xs text-emerald-400 group-hover:translate-x-1 transition-transform">
+                    ENTER STAGE ➔
+                </div>
+            </a>
+
+            <!-- ================= LOCKED QUESTS (5 - 18) ================= -->
 
             <!-- Week 5 -->
             <div class="locked-card p-4 flex flex-col justify-between min-h-[130px]">
@@ -370,151 +372,4 @@
                     <span class="text-sm">🔒</span>
                 </div>
                 <div>
-                    <h3 class="text-sm font-bold text-gray-500">Week 8 - 未解鎖</h3>
-                    <p class="text-[11px] text-gray-600 mt-1">期中專案展示 (MIDTERM)</p>
-                </div>
-                <div class="text-[10px] text-gray-600 tracking-widest text-right mt-2 font-mono">RESTRICTED</div>
-            </div>
-
-            <!-- Week 9 -->
-            <div class="locked-card p-4 flex flex-col justify-between min-h-[130px]">
-                <div class="flex justify-between items-start">
-                    <span class="text-xs font-mono text-gray-600">STAGE_09</span>
-                    <span class="text-sm">🔒</span>
-                </div>
-                <div>
-                    <h3 class="text-sm font-bold text-gray-500">Week 9 - 未解鎖</h3>
-                    <p class="text-[11px] text-gray-600 mt-1">任務鎖定中 (LOCKED)</p>
-                </div>
-                <div class="text-[10px] text-gray-600 tracking-widest text-right mt-2 font-mono">RESTRICTED</div>
-            </div>
-
-            <!-- Week 10 -->
-            <div class="locked-card p-4 flex flex-col justify-between min-h-[130px]">
-                <div class="flex justify-between items-start">
-                    <span class="text-xs font-mono text-gray-600">STAGE_10</span>
-                    <span class="text-sm">🔒</span>
-                </div>
-                <div>
-                    <h3 class="text-sm font-bold text-gray-500">Week 10 - 未解鎖</h3>
-                    <p class="text-[11px] text-gray-600 mt-1">任務鎖定中 (LOCKED)</p>
-                </div>
-                <div class="text-[10px] text-gray-600 tracking-widest text-right mt-2 font-mono">RESTRICTED</div>
-            </div>
-
-            <!-- Week 11 -->
-            <div class="locked-card p-4 flex flex-col justify-between min-h-[130px]">
-                <div class="flex justify-between items-start">
-                    <span class="text-xs font-mono text-gray-600">STAGE_11</span>
-                    <span class="text-sm">🔒</span>
-                </div>
-                <div>
-                    <h3 class="text-sm font-bold text-gray-500">Week 11 - 未解鎖</h3>
-                    <p class="text-[11px] text-gray-600 mt-1">任務鎖定中 (LOCKED)</p>
-                </div>
-                <div class="text-[10px] text-gray-600 tracking-widest text-right mt-2 font-mono">RESTRICTED</div>
-            </div>
-
-            <!-- Week 12 -->
-            <div class="locked-card p-4 flex flex-col justify-between min-h-[130px]">
-                <div class="flex justify-between items-start">
-                    <span class="text-xs font-mono text-gray-600">STAGE_12</span>
-                    <span class="text-sm">🔒</span>
-                </div>
-                <div>
-                    <h3 class="text-sm font-bold text-gray-500">Week 12 - 未解鎖</h3>
-                    <p class="text-[11px] text-gray-600 mt-1">任務鎖定中 (LOCKED)</p>
-                </div>
-                <div class="text-[10px] text-gray-600 tracking-widest text-right mt-2 font-mono">RESTRICTED</div>
-            </div>
-
-            <!-- Week 13 -->
-            <div class="locked-card p-4 flex flex-col justify-between min-h-[130px]">
-                <div class="flex justify-between items-start">
-                    <span class="text-xs font-mono text-gray-600">STAGE_13</span>
-                    <span class="text-sm">🔒</span>
-                </div>
-                <div>
-                    <h3 class="text-sm font-bold text-gray-500">Week 13 - 未解鎖</h3>
-                    <p class="text-[11px] text-gray-600 mt-1">任務鎖定中 (LOCKED)</p>
-                </div>
-                <div class="text-[10px] text-gray-600 tracking-widest text-right mt-2 font-mono">RESTRICTED</div>
-            </div>
-
-            <!-- Week 14 -->
-            <div class="locked-card p-4 flex flex-col justify-between min-h-[130px]">
-                <div class="flex justify-between items-start">
-                    <span class="text-xs font-mono text-gray-600">STAGE_14</span>
-                    <span class="text-sm">🔒</span>
-                </div>
-                <div>
-                    <h3 class="text-sm font-bold text-gray-500">Week 14 - 未解鎖</h3>
-                    <p class="text-[11px] text-gray-600 mt-1">任務鎖定中 (LOCKED)</p>
-                </div>
-                <div class="text-[10px] text-gray-600 tracking-widest text-right mt-2 font-mono">RESTRICTED</div>
-            </div>
-
-            <!-- Week 15 -->
-            <div class="locked-card p-4 flex flex-col justify-between min-h-[130px]">
-                <div class="flex justify-between items-start">
-                    <span class="text-xs font-mono text-gray-600">STAGE_15</span>
-                    <span class="text-sm">🔒</span>
-                </div>
-                <div>
-                    <h3 class="text-sm font-bold text-gray-500">Week 15 - 未解鎖</h3>
-                    <p class="text-[11px] text-gray-600 mt-1">任務鎖定中 (LOCKED)</p>
-                </div>
-                <div class="text-[10px] text-gray-600 tracking-widest text-right mt-2 font-mono">RESTRICTED</div>
-            </div>
-
-            <!-- Week 16 -->
-            <div class="locked-card p-4 flex flex-col justify-between min-h-[130px]">
-                <div class="flex justify-between items-start">
-                    <span class="text-xs font-mono text-gray-600">STAGE_16</span>
-                    <span class="text-sm">🔒</span>
-                </div>
-                <div>
-                    <h3 class="text-sm font-bold text-gray-500">Week 16 - 未解鎖</h3>
-                    <p class="text-[11px] text-gray-600 mt-1">任務鎖定中 (LOCKED)</p>
-                </div>
-                <div class="text-[10px] text-gray-600 tracking-widest text-right mt-2 font-mono">RESTRICTED</div>
-            </div>
-
-            <!-- Week 17 -->
-            <div class="locked-card p-4 flex flex-col justify-between min-h-[130px]">
-                <div class="flex justify-between items-start">
-                    <span class="text-xs font-mono text-gray-600">STAGE_17</span>
-                    <span class="text-sm">🔒</span>
-                </div>
-                <div>
-                    <h3 class="text-sm font-bold text-gray-500">Week 17 - 未解鎖</h3>
-                    <p class="text-[11px] text-gray-600 mt-1">任務鎖定中 (LOCKED)</p>
-                </div>
-                <div class="text-[10px] text-gray-600 tracking-widest text-right mt-2 font-mono">RESTRICTED</div>
-            </div>
-
-            <!-- Week 18 -->
-            <div class="locked-card p-4 flex flex-col justify-between min-h-[130px]">
-                <div class="flex justify-between items-start">
-                    <span class="text-xs font-mono text-yellow-600/70">STAGE_18</span>
-                    <span class="text-sm">🔒</span>
-                </div>
-                <div>
-                    <h3 class="text-sm font-bold text-gray-500">Week 18 - 未解鎖</h3>
-                    <p class="text-[11px] text-gray-600 mt-1">期末終極專案 (FINAL)</p>
-                </div>
-                <div class="text-[10px] text-yellow-600/50 tracking-widest text-right mt-2 font-mono">FINAL_BOSS</div>
-            </div>
-
-        </div>
-    </main>
-
-    <footer class="max-w-4xl mx-auto w-full text-center text-xs text-gray-500 font-mono py-6 border-t border-white/5 relative z-10">
-        <p class="hover:text-cyan-400 transition-colors cursor-default">
-            &copy; 2026 CYBERQUEST PORTFOLIO // ALL RIGHTS RESERVED.
-        </p>
-        <p class="text-[10px] text-gray-600 mt-1">DESIGNED FOR WEB PROGRAMMING COURSE</p>
-    </footer>
-
-</body>
-</html>
+                    <h3 class="text-sm font-bold text-gray-
